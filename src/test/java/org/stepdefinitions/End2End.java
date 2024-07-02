@@ -21,17 +21,17 @@ public class End2End {
 
 		driver.manage().window().maximize();
 
-		Thread.sleep(2000);
+	Thread.sleep(1000);
 		
 		driver.findElement(By.xpath("(//a[@class=\'main-login'])")).click();
 			
-		Thread.sleep(2000);
+	Thread.sleep(1000);
 		
 		driver.findElement(By.name("username")).sendKeys("vishal@hurekatek.com");
 		
 		driver.findElement(By.name("password")).sendKeys("Joevishal@0603");
 		
-		Thread.sleep(2000);
+	Thread.sleep(1000);
 		
 		driver.findElement(By.xpath("//button[@class='woocommerce-button button woocommerce-form-login__submit']")).click();
 
@@ -41,15 +41,19 @@ public class End2End {
     
 	public void User_navigates_to_shop_all_tab() throws InterruptedException {
 
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 		
 		driver.findElement(By.xpath("(//a[@href='https://boyds.wp.shottqsr.com/shop/']) [1]")).click();
 		
-		Thread.sleep(2000);
+	Thread.sleep(1000);
 		
-		driver.findElement(By.xpath("//img[@src='https://farmerbrother-wp-bucket.s3.amazonaws.com/wp-content/uploads/sites/2/2024/04/23110247/pomegranatetea.jpg']")).click();
+		driver.findElement(By.id("product-search")).sendKeys("Pomegranate Herbal Tea");
 		
-		Thread.sleep(2000);
+	Thread.sleep(5000);
+		
+		driver.findElement(By.xpath("//a[@href='https://boyds.wp.shottqsr.com/product/farmer-brothers-premium-pomegranate-herbal-tea/']")).click();
+		
+	Thread.sleep(2000);
 		
 		driver.findElement(By.xpath("(//button[@class='single_add_to_cart_button button alt'])")).click();
         }
