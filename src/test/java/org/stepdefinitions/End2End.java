@@ -50,13 +50,13 @@ public class End2End {
 		
 		Thread.sleep(1000);
 		
-		driver.findElement(By.id("product-search")).sendKeys("Pomegranate Herbal Tea");
+		driver.findElement(By.id("product-search")).sendKeys("Ground Coffee");
 		
 		Thread.sleep(5000);
 		
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		
-		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://boyds.wp.shottqsr.com/product/farmer-brothers-premium-pomegranate-herbal-tea/']")));
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://boyds.wp.shottqsr.com/product/french-no-6-12-oz-ground-coffee/']")));
 		element.click();
 
 		Thread.sleep(2000);
@@ -64,9 +64,9 @@ public class End2End {
 		driver.findElement(By.xpath("(//button[@class='single_add_to_cart_button button alt'])")).click();
 }
 	
-	@Then("the user adds farmer brothers premium pomegranate herbal tea to the cart")
+	@Then("the user adds French No 6 Ground Coffee 12 Oz to the cart")
 	
-	public void the_user_adds_farmer_brothers_premium_pomegranate_herbal_tea_to_the_cart() throws InterruptedException {
+	public void the_user_adds_French_No_6_Ground_Coffee_12_Oz_to_the_cart() throws InterruptedException {
 
 	   Thread.sleep(2000);
 		
